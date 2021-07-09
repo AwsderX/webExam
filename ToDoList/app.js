@@ -4,7 +4,8 @@ const app = Vue.createApp({
         return{
             valueInput: '',
             QuestList: [],
-            showModal: false
+            showModal: false,
+            messege: ""
         };
     },
     methods: {
@@ -15,7 +16,8 @@ const app = Vue.createApp({
                 if (this.valueInput === '') {return};
                 this.QuestList.push({
                     title: this.valueInput,
-                    id: Math.random()
+                    id: Math.random(),
+                    type: "one"
                 });
                 this.valueInput = '';                
             },
