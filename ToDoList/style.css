@@ -78,7 +78,19 @@ footer {
 }
 
 .form input {
-  width: 60%;
+  width: 80%;
+  margin-bottom: 10px;
+  height: 40px;
+  text-indent: 3%;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 0;
+  box-sizing: border-box;
+  outline: none;
+  transition: 0.2s border;
+}
+.form select {
+  width: 80%;
+  margin-bottom: 10px;
   height: 40px;
   text-indent: 3%;
   border: 1px solid rgb(0, 0, 0);
@@ -173,20 +185,20 @@ ul{
 li p{
   font-size: 1em;
 }
-
-input[type="checkbox"] + span {
-    padding-left: 10px;
+li div{
+  font-size: 0.9em;
+  width: 100%;
+  height: 100%;
+  word-break: break-all;
 }
 
 .btn-remove {
-    border: 1px solid #2a2f36;
     font-size: 1em;
     border: 2px solid #2a2f36;
     background-color: #333333;
     color: #fff;
     font-weight: 700;
     text-transform: uppercase;
-    padding: 2px 2px;
     outline: none;
     transition: 0.2s;
 }
@@ -195,8 +207,6 @@ input[type="checkbox"] + span {
   background-color: #535151;
   border-color: #535151;
 }
-
-
 
 .modal-mask {
   position: fixed;

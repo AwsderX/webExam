@@ -3,9 +3,8 @@ const app = Vue.createApp({
     data(){
         return{
             valueInputTitle: '',
-            valueInputText: '',
             valueType: 'one',
-            selectedOption : null,
+            selectedOption : 'one',
             QuestList: [],
             showModal: false
         };
@@ -14,9 +13,6 @@ const app = Vue.createApp({
             handlyInput (event){
                 this.valueInputTitle = event.target.value;
             },
-            handlyInput1 (event){
-                this.valueInputText = event.target.value;
-            },
             changeOption: function(){
                 this.valueType = this.selectedOption;
             },
@@ -24,12 +20,10 @@ const app = Vue.createApp({
                 if (this.valueInputTitle === '' || this.valueInputText === '') {return};
                 this.QuestList.push({
                     title: this.valueInputTitle,
-                    text: this.valueInputText,
                     id: Math.random(),
-                    type: thisvalueType
+                    type: this.valueType
                 });
-                this.valueInputTitle = '';
-                this.valueInputText = '';                
+                this.valueInputTitle = '';              
             },
             removeMask (index, type) {
                 const QList = this.QuestList ;
