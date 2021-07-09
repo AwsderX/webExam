@@ -2,24 +2,34 @@
 const app = Vue.createApp({
     data(){
         return{
-            valueInput: '',
+            valueInputTitle: '',
+            valueInputText: '',
+            valueType: 'one',
+            selectedOption : null,
             QuestList: [],
-            showModal: false,
-            messege: ""
+            showModal: false
         };
     },
     methods: {
             handlyInput (event){
-                this.valueInput = event.target.value;
+                this.valueInputTitle = event.target.value;
+            },
+            handlyInput1 (event){
+                this.valueInputText = event.target.value;
+            },
+            changeOption: function(){
+                this.valueType = this.selectedOption;
             },
             addTask (){
-                if (this.valueInput === '') {return};
+                if (this.valueInputTitle === '' || this.valueInputText === '') {return};
                 this.QuestList.push({
-                    title: this.valueInput,
+                    title: this.valueInputTitle,
+                    text: this.valueInputText,
                     id: Math.random(),
-                    type: "one"
+                    type: thisvalueType
                 });
-                this.valueInput = '';                
+                this.valueInputTitle = '';
+                this.valueInputText = '';                
             },
             removeMask (index, type) {
                 const QList = this.QuestList ;

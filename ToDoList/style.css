@@ -151,6 +151,7 @@ ul{
   height: 100px;
   margin-bottom: 10px;
   border-radius: 3px;
+  border: 2px solid#0dd6f8;
   background-color: #fff;
   margin-top: 15px;
 }
